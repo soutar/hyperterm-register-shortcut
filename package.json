@@ -1,0 +1,17 @@
+{
+  "name": "hyperterm-register-shortcut",
+  "version": "1.0.0",
+  "description": "Register global shortcuts for HyperTerm which respect config changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hyperterm",
+    "shortcut",
+    "hotkey",
+    "helper"
+  ],
+  "author": "John Soutar <john@soutar.me>",
+  "license": "ISC"
+}
