@@ -8,7 +8,7 @@
     "url": "https://github.com/Soutar/hyperterm-register-shortcut.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "hyperterm",
@@ -17,5 +17,8 @@
     "helper"
   ],
   "author": "John Soutar <john@soutar.me>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
 }
