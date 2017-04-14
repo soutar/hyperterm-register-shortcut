@@ -2,7 +2,10 @@
 
 Register user-customisable global shortcuts for HyperTerm which respect config changes. This module is designed to be used by HyperTerm plugins to implement global shortcuts and can't be installed as a plugin itself.
 
-For the configKey `foo`, `hyperterm-register-shortcut` will look for the user's preferred hotkey in `config.hotkeys.foo` and `config.fooShortcut`, prioritising the `hotkeys` object.
+For the configKey `foo`, `hyperterm-register-shortcut` will look for the user's preferred hotkey in following order:
+- `config.hotkeys.foo`
+- `config.foo.hotkey`
+- `config.fooShortcut`
 
 ## Usage
 
