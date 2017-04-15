@@ -2,14 +2,14 @@ const { dialog, globalShortcut } = require('electron');
 const getShortcutFromConfig = require('./modules/getShortcutFromConfig');
 
 function registerShortcut (configKey, action) {
-  return (app) => {
+  return (app, ...args) => {
     const { plugins, config } = app;
     function register (accelerator) {
       if (!accelerator) return;
       globalShortcut.unregister(accelerator);
       const registered = globalShortcut.register(
         accelerator,
-        () => action(app)
+        () => action(app, ...args)
       );
       if (!registered) {
         dialog.showMessageBox({
