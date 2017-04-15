@@ -1,8 +1,5 @@
 const { dialog, globalShortcut } = require('electron');
-
-function getShortcutFromConfig (key, config) {
-  return (config.hotkeys && config.hotkeys[key]) || config[`${key}Shortcut`];
-}
+const getShortcutFromConfig = require('./modules/getShortcutFromConfig');
 
 function registerShortcut (configKey, action) {
   return (app) => {
