@@ -1,4 +1,4 @@
-# hyperterm-register-shortcut
+# hyperterm-register-shortcut ![Build status](https://travis-ci.org/soutar/hyperterm-register-shortcut.svg?branch=master)
 
 Register user-customisable global shortcuts for HyperTerm which respect config changes. This module is designed to be used by HyperTerm plugins to implement global shortcuts and can't be installed as a plugin itself.
 
