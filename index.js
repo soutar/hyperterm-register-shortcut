@@ -9,7 +9,7 @@ function registerShortcut (configKey, action) {
       globalShortcut.unregister(accelerator);
       const registered = globalShortcut.register(
         accelerator,
-        () => action.apply(this, [app, ...args])
+        () => action(app, ...args)
       );
       if (!registered) {
         dialog.showMessageBox({
