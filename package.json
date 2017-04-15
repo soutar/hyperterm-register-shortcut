@@ -8,7 +8,7 @@
     "url": "https://github.com/Soutar/hyperterm-register-shortcut.git"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest **/*.test.js"
   },
   "keywords": [
     "hyperterm",

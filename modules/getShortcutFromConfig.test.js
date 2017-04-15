@@ -1,4 +1,4 @@
-const { getShortcutFromConfig } = require('../index')
+const getShortcutFromConfig = require('./getShortcutFromConfig');
 
 const config = {
   summonShortcut: 'Key Shortcut',
