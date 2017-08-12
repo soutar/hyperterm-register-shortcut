@@ -1,7 +1,7 @@
 const { dialog, globalShortcut } = require('electron');
 const getShortcutFromConfig = require('./modules/getShortcutFromConfig');
 
-function registerShortcut (configKey, action) {
+function registerShortcut (configKey, action, defaultShortcut) {
   return (app, ...args) => {
     const { plugins, config } = app;
     function register (accelerator) {
@@ -23,9 +23,14 @@ function registerShortcut (configKey, action) {
       globalShortcut.unregister(accelerator);
     }
 
+    // Setup optional default shortcut
+    const defaultConfig = {}
+    defaultConfig[`${configKey}Shortcut`] = defaultShortcut
+
     // Register the shortcut defined in ~/.hyperterm.js
     let cfg = plugins.getDecoratedConfig();
-    const shortcut = getShortcutFromConfig(configKey, cfg);
+
+    const shortcut = getShortcutFromConfig(configKey, Object.assign(defaultConfig, cfg));
     register(shortcut);
 
     // Subscribe to config changes so we can register/unregister as
