@@ -18,6 +18,7 @@ Then use registerShortcut to create an `onApp` method to export:
 
 ```js
 const configKey = 'YOUR_SHORTCUT_NAME';
+const defaultShortcut = 'Ctrl+;';
 
 function foo (app) {
   // do something with app
@@ -25,7 +26,7 @@ function foo (app) {
 }
 
 module.exports = {
-  onApp: registerShortcut(configKey, foo)
+  onApp: registerShortcut(configKey, foo, defaultShortcut)
 }
 ```
 Or, if you have other work you need to do inside `onApp`, export your own function which calls `registerShortcut` then calls the function returned from it with `app` as the parameter
